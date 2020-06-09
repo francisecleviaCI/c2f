@@ -2,8 +2,43 @@
  * Your code here!
  ******************************************************************************/
 
+ //1.
+//console.log(process.argv[2])
 
+// -- getInput(n) & process.argv refers to the 'node main.js #' input in 
+//the terminal. node = 0, main.js = 1, user input = 2.
+//That's why [n+2] below is used to capture the user input.--
 
+function getInput(n) {
+  return process.argv[n + 2];
+}
+//--the 'input' variable below stores the return value into a variable.--
+let input = getInput(0)
+console.log(input)
+//const celsius = process.argv[0];
+
+//2.
+//-- 'celsius' is the parameter(which can be named anything)
+//which serves as a placeholder because we don't always know
+//what the input will be. When the 'input' is put into the
+//function, it produces a return value. --
+function conversion(celsius){
+  return (celsius * 9/5) + 32;
+}
+
+//3.
+//-- 'answer' below is a variable that stores the output --
+let answer = conversion(input);
+answer; 
+console.log('Fahrenheit is ' + answer)
+
+// //4.
+
+const result = 'The concatenated result is ' + input + answer;
+
+// //5.
+
+console.log(result)
 
 
 /*******************************************************************************
